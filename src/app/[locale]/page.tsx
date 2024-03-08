@@ -10,25 +10,20 @@ import TwitterWidget from "@/components/ui/tony/pages/twitter-widget";
 import Price from "@/components/ui/tony/price";
 import RotateCard from "@/components/ui/tony/rotate-card";
 import TechStack from "@/components/ui/tony/tech-stack";
+import { useTranslations } from "next-intl";
 // import { useTranslations } from "next-intl";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 import Link from "next/link";
 
-async function getGithubStars() {
-  const res = await fetch("https://api.github.com/repos/tonyljx/RunningDev");
-  if (!res.ok) {
-    return;
-  }
-  const data = await res.json();
-  return data?.stargazers_count;
-}
+type Props = {
+  params: {locale: string};
+};
+export default function Home({params: {locale}}: Props) {
+  unstable_setRequestLocale(locale);
 
-export default async function Home() {
-  const githubStar = await getGithubStars();
-
-  // const t = useTranslations("Index");
-  const t = await getTranslations("Index");
+  const t = useTranslations("Index");
+  // const t = getTranslations("Index");
 
   return (
     <main className="mx-auto flex max-w-[1200px] flex-col items-center gap-3 px-6">

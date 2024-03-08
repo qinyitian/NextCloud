@@ -1,11 +1,15 @@
 import Confetti from "@/components/ui/tony/confetti";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 import React from "react";
 
-type Props = {};
-
-export default function AboutPage({}: Props) {
+type Props = {
+  params: {locale: string};
+};
+export default function AboutPage({params: {locale}}: Props) {
+  unstable_setRequestLocale(locale);
+  
   const t = useTranslations("AboutPage");
 
   return (

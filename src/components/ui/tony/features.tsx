@@ -18,11 +18,13 @@ import { useTranslations } from "next-intl";
 interface FeatureProps extends React.HTMLProps<HTMLDivElement> {
   // 你的自定义属性
 }
-
+type Props = {
+  params: {locale: string};
+};
 export default function Features({ className }: FeatureProps) {
   const themeColor = useColorStore((state) => state.themeColor);
- 
-  const t = useTranslations("Features");
+
+  // const t = useTranslations("Features");
 
   const features = [
     {
@@ -61,11 +63,13 @@ export default function Features({ className }: FeatureProps) {
     <div className={cn("w-full space-y-3", themeColor, className)}>
       <FadeIn>
         <h2 className="animate-fade-up text-center text-3xl font-bold tracking-tight lg:text-5xl">
-          {t("h1")}
+          {/* {t("h1")} */}
+          功能
         </h2>
       </FadeIn>
       <p className="text-center text-[16px] leading-7 text-muted-foreground">
-          {t("p1")}
+          {/* {t("p1")} */}
+          插件能力
       </p>
       <div className="grid grid-cols-1 gap-x-3 gap-y-6 md:grid-cols-3">
         {features.map((item) => (
