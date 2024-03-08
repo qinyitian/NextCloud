@@ -12,13 +12,7 @@ export default function Footer({}: Props) {
         <p className="flex-1">AutoDo 自动上品</p>
 
         <div className="flex items-center gap-1">
-          {/* <Link
-            target="_blank"
-            href="https://twitter.com/abc30037274"
-            className=" rounded p-2 transition-colors duration-150 hover:bg-slate-200"
-          >
-            <Icons.X className="h-4 w-4" />
-          </Link> */}
+
           {/* <Link
             target="_blank"
             href="https://github.com/tonyljx/"
