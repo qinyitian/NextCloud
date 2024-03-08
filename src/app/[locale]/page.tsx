@@ -40,27 +40,31 @@ export default async function Home() {
           {t("h1")}
         </h2>
         <p className="text-center text-muted-foreground duration-1000 animate-in fade-in slide-in-from-bottom-5">
-          An template for your next project based on Next.js {t("title")}
+          {t("p1")}
         </p>
+        <p className="text-center text-muted-foreground duration-1000 animate-in fade-in slide-in-from-bottom-5">
+          {t("connect")}
+        </p>
+
 
         <div className="flex justify-center gap-3">
           <Link
             target="_blank"
-            href="https://github.com/tonyljx/RunningDev"
+            href=""
             className="flex items-center gap-2 rounded border bg-slate-100 px-4 py-2  transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
           >
-            <Icons.gitHub className="h-4 w-4" />
-            <span>Star on Github </span>
-            <span className="">{githubStar}</span>
+            <Icons.google className="h-4 w-4" />
+            <span> {t("link")} </span>
+            <span className="">100+</span>
           </Link>
 
           <Link
             target="_blank"
-            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftonyljx%2Fsaas-lightweight-template&env=GITHUB_APP_CLIENT_ID,GITHUB_APP_CLIENT_SECRET,GOOGLE_APP_CLIENT_ID,GOOGLE_CLIENT_SECRET,NEXTAUTH_SECRET&envDescription=api%20key%20for%20oauth%20login"
+            href={t("linkTo")}
             className=" flex items-center gap-2 rounded border bg-slate-100 px-4 py-2  transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
           >
             <Icons.vercel className="h-4 w-4" />
-            <span>Deploy to vercel</span>
+            <span>{t("example")}</span>
           </Link>
         </div>
       </div>
@@ -69,19 +73,19 @@ export default async function Home() {
 
       <Features className="mt-[3rem]" />
 
-      <TechStack className="mt-[3rem]" />
+      {/* <TechStack className="mt-[3rem]" /> */}
 
-      <MoreFeature className="mt-[4rem]" />
+      {/* <MoreFeature className="mt-[4rem]" /> */}
 
       <Mansory className="mt-[10rem]" />
 
       {/* 付款页面 */}
-      <Price />
+      {/* <Price /> */}
 
       {/* FAQ */}
       <AccordionFAQ />
 
-      <TwitterWidget className="mt-[3rem] max-w-[60rem]" />
+      {/* <TwitterWidget className="mt-[3rem] max-w-[60rem]" /> */}
     </main>
   );
 }

@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useColorStore } from "@/store/color-store";
+import { useTranslations } from "next-intl";
 
 interface FeatureProps extends React.HTMLProps<HTMLDivElement> {
   // 你的自定义属性
@@ -20,49 +21,51 @@ interface FeatureProps extends React.HTMLProps<HTMLDivElement> {
 
 export default function Features({ className }: FeatureProps) {
   const themeColor = useColorStore((state) => state.themeColor);
+ 
+  const t = useTranslations("Features");
 
   const features = [
     {
-      title: "User Friendly",
-      desc: "Easy to use and copy whatever you like to your project",
+      title: "自动模拟上架插件",
+      desc: "本地整理商品素材后，通过本插件自动打开新页面，按次序点击上架商品，完美模拟手动上货步骤，不怕审计",
       icon: <UserRoundPlus className="text-slate-50" />,
     },
     {
-      title: "Integration",
-      desc: "Use modern libraries like shadcn and nextAuth.js",
+      title: "其他定制化功能插件",
+      desc: "如有此定制要求，请联系开发者",
       icon: <PlugIcon className="text-slate-50" />,
     },
-    {
-      title: "Analytics",
-      desc: "Detailed analytics on user engagement and product usage for informed decision-making.",
-      icon: <BarChartIcon className="text-slate-50" />,
-    },
-    {
-      title: "Responsive Design",
-      desc: "Optimized for all devices, ensuring a seamless experience across desktop, tablet, and mobile.",
-      icon: <Smartphone className="text-slate-50" />, // Replace with appropriate icon from Lucide
-    },
-    {
-      title: "Production",
-      desc: "Ready for your production",
-      icon: <RocketIcon className="text-slate-50" />, // Replace with actual Accessibility icon from Lucide
-    },
-    {
-      title: "Multiple Components",
-      desc: "ready-to-use components",
-      icon: <Boxes className="text-slate-50" />, // Replace with actual Accessibility icon from Lucide
-    },
+    // {
+    //   title: "Analytics",
+    //   desc: "Detailed analytics on user engagement and product usage for informed decision-making.",
+    //   icon: <BarChartIcon className="text-slate-50" />,
+    // },
+    // {
+    //   title: "Responsive Design",
+    //   desc: "Optimized for all devices, ensuring a seamless experience across desktop, tablet, and mobile.",
+    //   icon: <Smartphone className="text-slate-50" />, // Replace with appropriate icon from Lucide
+    // },
+    // {
+    //   title: "Production",
+    //   desc: "Ready for your production",
+    //   icon: <RocketIcon className="text-slate-50" />, // Replace with actual Accessibility icon from Lucide
+    // },
+    // {
+    //   title: "Multiple Components",
+    //   desc: "ready-to-use components",
+    //   icon: <Boxes className="text-slate-50" />, // Replace with actual Accessibility icon from Lucide
+    // },
   ];
 
   return (
     <div className={cn("w-full space-y-3", themeColor, className)}>
       <FadeIn>
         <h2 className="animate-fade-up text-center text-3xl font-bold tracking-tight lg:text-5xl">
-          Features
+          {t("h1")}
         </h2>
       </FadeIn>
       <p className="text-center text-[16px] leading-7 text-muted-foreground">
-        Saas lightweight template is all you nedd for your next Saas business
+          {t("p1")}
       </p>
       <div className="grid grid-cols-1 gap-x-3 gap-y-6 md:grid-cols-3">
         {features.map((item) => (

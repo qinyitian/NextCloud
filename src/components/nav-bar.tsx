@@ -33,11 +33,11 @@ export default function NavBar({}: Props) {
       <a href="/" className="flex items-center gap-3">
         {/* <Image height={24} width={100} src="/vercel.svg" alt="logo" /> */}
         <Icons.vercel />
-        <span className="text-lg font-semibold">RunningDev</span>
+        <span className="text-lg font-semibold">AutoDo 自动上品</span>
       </a>
 
       <div className="flex items-center gap-2">
-        <IntlLink
+        {/* <IntlLink
           className={cn(
             "mr-10 transition-colors duration-150 hover:text-sky-500",
             {
@@ -47,7 +47,7 @@ export default function NavBar({}: Props) {
           href="/about"
         >
           Changlog
-        </IntlLink>
+        </IntlLink> */}
 
         <IntlLink
           className={cn(
@@ -78,7 +78,8 @@ export default function NavBar({}: Props) {
           // <Button>
           //   <Link href="/api/auth/signin">Sign In</Link>
           // </Button>
-          <LoginModal />
+          // <LoginModal />
+          ""
         ) : (
           <div className="flex items-center gap-2">
             {/* <span className="text-base font-bold">Hi</span> */}
@@ -114,6 +115,8 @@ export default function NavBar({}: Props) {
             </DropdownMenu>
           </div>
         )}
+
+        
       </div>
     </header>
   );

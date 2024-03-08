@@ -1,10 +1,36 @@
 {
   "Index": {
-    "title": "Running NextJs",
-    "h1": "现代 Next.Js SaaS 模板"
+    "title": "脚本定制",
+    "h1": "平台上货自动化",
+    "p1": "支持vinted, shopify, carousell等平台，根据实际场景可定制的专业工具",
+    "link": "用户",
+    "linkTo": "https://www.bilibili.com/video/BV1Fx4y1Q7cq/",
+    "example": "演示",
+    "connect": "微信：yangerstarz / QQ邮箱：2450603338@qq.com"
+
   },
   "languageSwitch": {
     "label": "选择语言",
     "locale": "{locale, select, zh {简体中文} en {英语} other {其他}}"
+  },
+  "Features": {
+    "h1": "功能",
+    "p1": "插件能力"
+  },
+  "AboutPage": {
+    "we": "",
+    "info": "专业电商辅助工具开发，帮助更多客户朋友高效完成业务操作，快速完成闭环",
+    "c1": "微信：yangerstarz",
+    "c2": "qq邮箱：2450603338@qq.com"
+  },
+  "AccordionFAQ": {
+    "h1": "一些问题",
+    "p1": "有任何其他问题，请点击这里",
+    "q1": "工具批量上传是否会影响平台对店铺的审核",
+    "a1": "不会，和人工上传完全一样的点击过程，单个店铺产品依次上传，使用过程即可知道",
+    "q2": "如何收费",
+    "a2": "目前是分为按月和按年收费两种，不支持永久免费，因为这个平台的风口过去了，工具脚本就不在被需要，短期付费更能保证客户权益",
+    "q3": "其他问题",
+    "a3": "请联系客服咨询"
   }
 }

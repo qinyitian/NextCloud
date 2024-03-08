@@ -28,7 +28,7 @@ export default function TwitterWidget({ className }: Props) {
           <br />
           <br />
           To fix this, use `font-variant-numeric` and `font-feature-setting`:{" "}
-          <a href="https://t.co/Usbcn4dFNd">pic.twitter.com/Usbcn4dFNd</a>
+          <a href="https://www.bilibili.com/video/BV1Fx4y1Q7cq/">https://www.bilibili.com/video/BV1Fx4y1Q7cq/</a>
         </p>
         &mdash; StackBlitz (@stackblitz){" "}
         <a href="https://twitter.com/stackblitz/status/1745063227124261004?ref_src=twsrc%5Etfw">

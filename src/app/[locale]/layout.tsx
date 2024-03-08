@@ -15,8 +15,8 @@ type Props = {
 };
 
 export const metadata: Metadata = {
-  title: "RunningDev",
-  description: "The NextJs Saas Template",
+  title: "AutoDo 自动上品",
+  description: "平添自动上品工具",
 };
 
 const fontSans = FontSans({

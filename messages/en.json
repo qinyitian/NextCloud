@@ -1,10 +1,34 @@
 {
   "Index": {
-    "title": "Running NextJs",
-    "h1": "Modern NextJs SaaS Template"
+    "title": "Script customization",
+    "h1": "Platform loading automation",
+    "p1": "Support vinted, shopify, carousell, etc., according to the actual scenario can be customized",
+    "link": "what",
+    "linkTo": "https://www.bilibili.com/video/BV1Fx4y1Q7cq/",
+    "example": "example"
   },
   "languageSwitch": {
     "label": "Change language",
     "locale": "{locale, select, zh {Chinese} en {English} other {Unknown}}"
+  },
+  "Features": {
+    "h1": "FEATURE",
+    "p1": "Other customized function plug-ins"
+  },
+  "AboutPage": {
+    "we": "Hello",
+    "info": "Development of professional e-commerce auxiliary tools to help more customers and friends efficiently complete business operations and quickly complete the closed loop",
+    "c1": "WeChat：yangerstarz",
+    "c2": "QQ Mail：2450603338@qq.com"
+  },
+  "AccordionFAQ": {
+    "h1": "Questions & Answers",
+    "p1": "If you have any other questions - please get in touch",
+    "q1": "Whether the batch upload of tools will affect the platform's audit of the store",
+    "a1": "No, the click process is exactly the same as manual upload, and the products of a single store are uploaded in turn, and the use process can be known",
+    "q2": "How to charge",
+    "a2": "At present, it is divided into two kinds of monthly and annual charges, and it does not support permanent free, because the platform and the tuyere have passed, the tool script is no longer needed, and the short-term payment can better guarantee the rights and interests of customers",
+    "q3": "Other questions",
+    "a3": "Please contact customer service"
   }
 }
