@@ -15,16 +15,6 @@ export default function Mansory({ className }: FeatureProps) {
   const items = [
     {
       imageUrl:
-        "https://pbs.twimg.com/profile_images/1585995910521446400/OXrx3eAV_x96.jpg",
-      alt: "@Lycoyis",
-      name: "Lycoyis",
-      handle: "@Lycoyis",
-      profileLink: "",
-      description:
-        "物有所值！",
-    },
-    {
-      imageUrl:
         "https://pbs.twimg.com/profile_images/1587046912490090496/kuBUqNkb_x96.jpg",
       alt: "@mo小童",
       name: "mo小童",
