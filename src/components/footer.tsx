@@ -9,7 +9,7 @@ export default function Footer({}: Props) {
   return (
     <footer className="mt-20   flex w-full flex-wrap gap-10 border-t px-8 py-12 ">
       <div className="mr-auto flex flex-1 flex-col">
-        <p className="flex-1">AutoDo 自动上品</p>
+        <p className="flex-1">Z+ 自动脚本</p>
 
         <div className="flex items-center gap-1">
 
