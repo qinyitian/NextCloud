@@ -15,8 +15,8 @@ type Props = {
 };
 
 export const metadata: Metadata = {
-  title: "AutoDo 自动上品",
-  description: "平添自动上品工具",
+  title: "Z+自动化脚本工具",
+  description: "自动化工具",
 };
 
 const fontSans = FontSans({
