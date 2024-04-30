@@ -33,7 +33,7 @@ export default function NavBar({}: Props) {
       <a href="/" className="flex items-center gap-3">
         {/* <Image height={24} width={100} src="/vercel.svg" alt="logo" /> */}
         <Icons.vercel />
-        <span className="text-lg font-semibold">AutoDo 自动上品</span>
+        <span className="text-lg font-semibold">Z+ 自动脚本</span>
       </a>
 
       <div className="flex items-center gap-2">
