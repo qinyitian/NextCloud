@@ -34,6 +34,9 @@ export default function Home({params: {locale}}: Props) {
         <h2 className="bg-gradient-to-r from-pink-500  to-violet-500 bg-clip-text text-center text-4xl font-bold text-transparent duration-1000 animate-in fade-in slide-in-from-bottom-5 md:text-7xl md:leading-[5rem]">
           {t("h1")}
         </h2>
+        <p className="text-center text-xl text-muted-foreground duration-1000 animate-in fade-in slide-in-from-bottom-5">
+          {t("p2")}
+        </p>
         <p className="text-center text-muted-foreground duration-1000 animate-in fade-in slide-in-from-bottom-5">
           {t("p1")}
         </p>
