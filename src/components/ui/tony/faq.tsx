@@ -21,35 +21,44 @@ export function AccordionFAQ() {
       </p>
 
       <Accordion type="single" collapsible className="mx-auto mt-10 w-3/4">
-        <AccordionItem value="item-1">
+              <AccordionItem value="item-1">
           <AccordionTrigger>
             {/* {t("q1")} */}
-            工具批量上传是否会影响平台对店铺的审核
+            脚本的功能
           </AccordionTrigger>
-
           <AccordionContent>
             {/* {t("a1")}  */}
-            不会，和人工上传完全一样的点击过程，单个店铺产品依次上传，使用过程即可知道
+            在浏览器进行的需要重复的业务操作，都可以写成脚本，自动执行。例如：自动从本地读取数据上货这类需要多次进行的业务。
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
+          <AccordionTrigger>
+            {/* {t("q1")} */}
+            工具批量的自动操作是否会影响平台对店铺的审核
+          </AccordionTrigger>
+          <AccordionContent>
+            {/* {t("a1")}  */}
+            不会，和人工上传完全一样的点击过程，模拟过程可以直观看见，在平台看来，就是人类在不断的点击提交。
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-3">
           <AccordionTrigger>
             {/* {t("q2")} */}
             如何收费
           </AccordionTrigger>
           <AccordionContent>
             {/* {t("a2")}  */}
-            目前是分为按月和按年收费两种，不支持永久免费，因为这个平台的风口过去了，工具脚本就不在被需要，短期付费更能保证客户权益
+            一次购买，永久使用，不会限制只能一个机器或者一个ip使用。一个操作不复杂的上货脚本定价在￥500左右，其他则根据定制的复杂度适当加价，可商议。
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-3">
+        <AccordionItem value="item-4">
           <AccordionTrigger>
             {/* {t("q3")} */}
             其他问题
           </AccordionTrigger>
           <AccordionContent>
             {/* {t("a3")}  */}
-            请联系客服咨询
+            请联系客服咨询，微信号：Yangerstar1
           </AccordionContent>
         </AccordionItem>
       </Accordion>
