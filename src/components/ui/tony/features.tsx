@@ -19,7 +19,7 @@ interface FeatureProps extends React.HTMLProps<HTMLDivElement> {
   // 你的自定义属性
 }
 type Props = {
-  params: {locale: string};
+  params: { locale: string };
 };
 export default function Features({ className }: FeatureProps) {
   const themeColor = useColorStore((state) => state.themeColor);
@@ -33,20 +33,21 @@ export default function Features({ className }: FeatureProps) {
       icon: <UserRoundPlus className="text-slate-50" />,
     },
     {
+      title: "批量点赞评论工具",
+      desc: "自媒体平台的自动点赞，评论功能",
+      icon: <BarChartIcon className="text-slate-50" />,
+    },
+    {
+      title: "B站自动下载任务",
+      desc: "比如指定b站收藏夹链接，将自动下载所有视频，且配置本地文件名和视频标题一致",
+      icon: <Smartphone className="text-slate-50" />, // Replace with appropriate icon from Lucide
+    },
+    {
       title: "其他定制化功能插件",
-      desc: "如有此定制要求，请联系开发者",
+      desc: "如有此定制要求，请联系我们",
       icon: <PlugIcon className="text-slate-50" />,
     },
-    // {
-    //   title: "Analytics",
-    //   desc: "Detailed analytics on user engagement and product usage for informed decision-making.",
-    //   icon: <BarChartIcon className="text-slate-50" />,
-    // },
-    // {
-    //   title: "Responsive Design",
-    //   desc: "Optimized for all devices, ensuring a seamless experience across desktop, tablet, and mobile.",
-    //   icon: <Smartphone className="text-slate-50" />, // Replace with appropriate icon from Lucide
-    // },
+
     // {
     //   title: "Production",
     //   desc: "Ready for your production",
@@ -68,8 +69,8 @@ export default function Features({ className }: FeatureProps) {
         </h2>
       </FadeIn>
       <p className="text-center text-[16px] leading-7 text-muted-foreground">
-          {/* {t("p1")} */}
-          插件能力
+        {/* {t("p1")} */}
+        插件能力
       </p>
       <div className="grid grid-cols-1 gap-x-3 gap-y-6 md:grid-cols-3">
         {features.map((item) => (

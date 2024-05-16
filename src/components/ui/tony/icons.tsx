@@ -184,6 +184,12 @@ export const Icons = {
       <path d="M12 1L24 22H0L12 1Z" fill="#000000" />
     </svg>
   ),
+  zPlus: (props: IconProps) => (
+    <svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100%" height="100%" fill="#18181B" />
+      <text x="50%" y="60%" text-anchor="middle" alignment-baseline="middle" font-size="600" fill="white">Z</text>
+    </svg>
+  ),
   lemon: (props: IconProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"

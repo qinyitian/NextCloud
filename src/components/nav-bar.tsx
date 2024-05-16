@@ -32,7 +32,7 @@ export default function NavBar({}: Props) {
     <header className=" flex w-full justify-between border-b px-6 py-2">
       <a href="/" className="flex items-center gap-3">
         {/* <Image height={24} width={100} src="/vercel.svg" alt="logo" /> */}
-        <Icons.vercel />
+        <Icons.zPlus />
         <span className="text-lg font-semibold">Z+ 自动脚本</span>
       </a>
 
