@@ -27,37 +27,27 @@ export default function Features({ className }: FeatureProps) {
   // const t = useTranslations("Features");
 
   const features = [
+
     {
-      title: "自动模拟上架插件",
+      title: "B站视频保存系列",
+      desc: "可选择下载指定b站收藏夹内容、关键词搜索后下载前N个视频。一键执行，自动下载",
+      icon: <Smartphone className="text-slate-50" />, // Replace with appropriate icon from Lucide
+    },
+    {
+      title: "dy视频保存系列",
+      desc: "可选择下载指定dy收藏夹，或者指定用户主页下所有视频和图文。一键执行，自动下载",
+      icon: <Smartphone className="text-slate-50" />, // Replace with appropriate icon from Lucide
+    },
+    {
+      title: "自动模拟商品上架插件",
       desc: "本地整理商品素材后，通过本插件自动打开新页面，按次序点击上架商品，完美模拟手动上货步骤，不怕审计",
       icon: <UserRoundPlus className="text-slate-50" />,
-    },
-    {
-      title: "批量点赞评论工具",
-      desc: "自媒体平台的自动点赞，评论功能",
-      icon: <BarChartIcon className="text-slate-50" />,
-    },
-    {
-      title: "B站自动下载任务",
-      desc: "比如指定b站收藏夹链接，将自动下载所有视频，且配置本地文件名和视频标题一致",
-      icon: <Smartphone className="text-slate-50" />, // Replace with appropriate icon from Lucide
     },
     {
       title: "其他定制化功能插件",
       desc: "如有此定制要求，请联系我们",
       icon: <PlugIcon className="text-slate-50" />,
     },
-
-    // {
-    //   title: "Production",
-    //   desc: "Ready for your production",
-    //   icon: <RocketIcon className="text-slate-50" />, // Replace with actual Accessibility icon from Lucide
-    // },
-    // {
-    //   title: "Multiple Components",
-    //   desc: "ready-to-use components",
-    //   icon: <Boxes className="text-slate-50" />, // Replace with actual Accessibility icon from Lucide
-    // },
   ];
 
   return (
@@ -70,7 +60,7 @@ export default function Features({ className }: FeatureProps) {
       </FadeIn>
       <p className="text-center text-[16px] leading-7 text-muted-foreground">
         {/* {t("p1")} */}
-        插件能力
+        -- --
       </p>
       <div className="grid grid-cols-1 gap-x-3 gap-y-6 md:grid-cols-3">
         {features.map((item) => (

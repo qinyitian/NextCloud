@@ -21,72 +21,88 @@ export default function Price({ className }: PriceProps) {
     annually: { x: "95%" },
   };
 
-  const priceStrategy = [
+  const biliPriceStrategy = [
     {
-      plan: "Standard",
-      price: "free",
-      desc: "Free to use",
+      plan: "试用版",
+      price: "￥9.9",
+      desc: "适用于套餐中每个脚本",
       features: [
-        "1 macOS device",
-        "Pay once, use forever",
-        "All screen Studio features",
-        "1 year of updates",
+        "10 次使用量",
+        "20 次单个视频链接直接下载使用量量",
+        "赠送 3 次使用量",
       ],
     },
     {
-      plan: "Extended",
-      price: "$9.99",
-      desc: "Great for multi-devices setups & small teams.",
+      plan: "常用版",
+      price: "￥29",
+      desc: "适用于套餐中每个脚本",
       features: [
-        "3 macOS device",
-        "Pay once, use forever",
-        "All screen Studio features",
-        "1 year of updates",
+        "49 次使用量",
+        "100 次单个视频链接直接下载使用量量",
+        "赠送 10 次使用量",
       ],
     },
     {
-      plan: "Pro",
-      price: "$13.99",
-      desc: "Pay per seat for your team.",
+      plan: "升级版",
+      price: "￥49",
+      desc: "适用于套餐中每个脚本",
       features: [
-        "unlimited macOS device",
-        "All screen Studio features",
-        "App updates during the subscription",
+        "99 次使用量",
+        "200 次单个视频链接直接下载使用量量",
+        "赠送 20 次使用量",
+      ],
+    },
+    {
+      plan: "豪华版",
+      price: "￥89",
+      desc: "适用于套餐中每个脚本",
+      features: [
+        "199 次使用量",
+        "400 次单个视频链接直接下载使用量量",
+        "赠送 40 次使用量",
       ],
     },
   ];
 
-  const yearPriceStrategy = [
+  const dyPriceStrategy = [
     {
-      plan: "Standard",
-      price: "free",
-      desc: "Free to use",
+      plan: "试用版",
+      price: "￥9.9",
+      desc: "适用于套餐中每个脚本",
       features: [
-        "1 macOS device",
-        "Pay once, use forever",
-        "All screen Studio features",
-        "1 year of updates",
+        "10 次使用量",
+        "20 次单个视频链接直接下载使用量量",
+        "赠送 3 次使用量",
       ],
     },
     {
-      plan: "Extended",
-      price: "$7.99",
-      desc: "Great for multi-devices setups & small teams.",
+      plan: "常用版",
+      price: "￥29",
+      desc: "适用于套餐中每个脚本",
       features: [
-        "3 macOS device",
-        "Pay once, use forever",
-        "All screen Studio features",
-        "1 year of updates",
+        "49 次使用量",
+        "100 次单个视频链接直接下载使用量量",
+        "赠送 10 次使用量",
       ],
     },
     {
-      plan: "Pro",
-      price: "$11.99",
-      desc: "Pay per seat for your team.",
+      plan: "升级版",
+      price: "￥49",
+      desc: "适用于套餐中每个脚本",
       features: [
-        "unlimited macOS device",
-        "All screen Studio features",
-        "App updates during the subscription",
+        "99 次使用量",
+        "200 次单个视频链接直接下载使用量量",
+        "赠送 20 次使用量",
+      ],
+    },
+    {
+      plan: "豪华版",
+      price: "￥89",
+      desc: "适用于套餐中每个脚本",
+      features: [
+        "199 次使用量",
+        "400 次单个视频链接直接下载使用量量",
+        "赠送 40 次使用量",
       ],
     },
   ];
@@ -95,12 +111,11 @@ export default function Price({ className }: PriceProps) {
     <div className={cn(className)}>
       <FadeIn>
         <h2 className="animate-fade-up text-center text-3xl font-bold tracking-tight lg:text-5xl">
-          Use template to speed up
+          产品选购
         </h2>
       </FadeIn>
       <p className="text-center text-[16px] leading-7 text-muted-foreground">
-        Screen Studio is a one-time purchase. You get all the features in every
-        plan.
+          第二次购买填入原账号，将自动为原账号充值次数
       </p>
 
       {/* month or year plan */}
@@ -111,7 +126,7 @@ export default function Price({ className }: PriceProps) {
           })}
           onClick={() => setIsMonth(true)}
         >
-          Monthly
+          bili套餐
         </div>
         <div
           className={cn("z-10  cursor-pointer rounded p-1 text-center", {
@@ -119,7 +134,7 @@ export default function Price({ className }: PriceProps) {
           })}
           onClick={() => setIsMonth(false)}
         >
-          Annually
+          dy套餐
         </div>
         <motion.div
           className="absolute inset-1 z-0  w-1/2 rounded bg-slate-50"
@@ -132,73 +147,73 @@ export default function Price({ className }: PriceProps) {
       <div className="mt-12 grid w-full gap-8 md:grid-cols-3  md:gap-6">
         {/* plan */}
         {isMonth
-          ? priceStrategy.map((item) => (
-              <div
-                key={item.plan}
+          ? biliPriceStrategy.map((item) => (
+            <div
+              key={item.plan}
+              className={cn(
+                "flex flex-col gap-2 rounded-lg border bg-slate-100 px-8 py-10 transition-all duration-150 hover:-translate-y-2 hover:shadow-lg",
+              )}
+            >
+              <h3 className=" bg-gradient-to-r from-sky-500 to-violet-500 bg-clip-text text-2xl font-semibold text-transparent">
+                {item.plan}
+              </h3>
+              <p className="text-3xl font-bold">{item.price}</p>
+              <p className="text-muted-foreground">{item.desc}</p>
+
+              {/* features */}
+              <ul className="mb-6 mt-10 flex-1 space-y-3">
+                {item.features.map((feature, idx) => (
+                  <li key={idx} className="flex gap-2">
+                    <CheckCircleIcon className="text-emerald-500" /> {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <Link
+                href="https://mbd.pub/o/bread/ZpaXl51y"
                 className={cn(
-                  "flex flex-col gap-2 rounded-lg border bg-slate-100 px-8 py-10 transition-all duration-150 hover:-translate-y-2 hover:shadow-lg",
+                  "rounded bg-primary px-3 py-2 text-center font-medium text-slate-50 transition-all duration-150 ",
+                  themeColor,
                 )}
               >
-                <h3 className=" bg-gradient-to-r from-sky-500 to-violet-500 bg-clip-text text-2xl font-semibold text-transparent">
-                  {item.plan}
-                </h3>
-                <p className="text-3xl font-bold">{item.price}</p>
-                <p className="text-muted-foreground">{item.desc}</p>
-
-                {/* features */}
-                <ul className="mb-6 mt-10 flex-1 space-y-3">
-                  {item.features.map((feature, idx) => (
-                    <li key={idx} className="flex gap-2">
-                      <CheckCircleIcon className="text-emerald-500" /> {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href="#"
-                  className={cn(
-                    "rounded bg-primary px-3 py-2 text-center font-medium text-slate-50 transition-all duration-150 ",
-                    themeColor,
-                  )}
-                >
-                  Getting Started
-                </Link>
-              </div>
-            ))
+                Getting Started
+              </Link>
+            </div>
+          ))
           : // 否则是年度的订阅方案
-            yearPriceStrategy.map((item) => (
-              <div
-                key={item.plan}
+          dyPriceStrategy.map((item) => (
+            <div
+              key={item.plan}
+              className={cn(
+                "flex flex-col gap-2 rounded-lg border bg-slate-100 px-8 py-10 transition-all duration-150 hover:-translate-y-2 hover:shadow-lg",
+              )}
+            >
+              <h3 className=" bg-gradient-to-r from-sky-500 to-violet-500 bg-clip-text text-2xl font-semibold text-transparent">
+                {item.plan}
+              </h3>
+              <p className="text-3xl font-bold">{item.price}</p>
+              <p className="text-muted-foreground">{item.desc}</p>
+
+              {/* features */}
+              <ul className="mb-6 mt-10 flex-1 space-y-3">
+                {item.features.map((feature, idx) => (
+                  <li key={idx} className="flex gap-2">
+                    <CheckCircleIcon className="text-emerald-500" /> {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <Link
+                href="https://mbd.pub/o/bread/mbd-ZpaZlZdr"
                 className={cn(
-                  "flex flex-col gap-2 rounded-lg border bg-slate-100 px-8 py-10 transition-all duration-150 hover:-translate-y-2 hover:shadow-lg",
+                  "rounded bg-primary px-3 py-2 text-center font-medium text-slate-50 transition-all duration-150 ",
+                  themeColor,
                 )}
               >
-                <h3 className=" bg-gradient-to-r from-sky-500 to-violet-500 bg-clip-text text-2xl font-semibold text-transparent">
-                  {item.plan}
-                </h3>
-                <p className="text-3xl font-bold">{item.price}</p>
-                <p className="text-muted-foreground">{item.desc}</p>
-
-                {/* features */}
-                <ul className="mb-6 mt-10 flex-1 space-y-3">
-                  {item.features.map((feature, idx) => (
-                    <li key={idx} className="flex gap-2">
-                      <CheckCircleIcon className="text-emerald-500" /> {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href="#"
-                  className={cn(
-                    "rounded bg-primary px-3 py-2 text-center font-medium text-slate-50 transition-all duration-150 ",
-                    themeColor,
-                  )}
-                >
-                  Getting Started
-                </Link>
-              </div>
-            ))}
+                Getting Started
+              </Link>
+            </div>
+          ))}
       </div>
     </div>
   );

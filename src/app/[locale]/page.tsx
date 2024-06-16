@@ -75,10 +75,12 @@ export default function Home({params: {locale}}: Props) {
 
       {/* <MoreFeature className="mt-[4rem]" /> */}
 
-      <Mansory className="mt-[10rem]" />
+      <p></p>
 
       {/* 付款页面 */}
-      {/* <Price /> */}
+      <Price />
+      
+      {/* <Mansory className="mt-[10rem]" /> */}
 
       {/* FAQ */}
       <AccordionFAQ />
